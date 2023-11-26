@@ -1,0 +1,265 @@
+body{
+    background-color:rgb(212, 216, 220);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main{
+    background: linear-gradient(45deg, rgb(153, 229, 229), rgb(1, 46, 46) );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 30vw;
+    height: 500px;
+    background-size: contain;
+    border-radius: 20px;
+    border: 2px solid rgb(219, 209, 209);
+    box-shadow: 1px 4px 4px 2px rgb(171, 168, 168);
+    margin-top: 20px;
+    
+}
+
+#title{
+    display: flex;
+    width:50%;
+    height: 50px;
+    border-radius: 15px;
+    background: linear-gradient(340deg, rgb(153, 229, 229), rgb(1, 46, 46)  60%);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 2px 4px 1px rgba(51, 46, 46, 0.2);    
+    margin-top: 5px;
+}
+#Contact-first{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:x-large;
+}
+
+#Contact-second{
+    text-align: center;
+    color:rgb(19, 230, 230) ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:x-large;
+}
+
+
+#Information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+form{
+    width: 80%;
+    margin:5px 12.5% 5% 12.5%;
+    padding: 0px;
+}
+.Information-List{
+    list-style-type: none;
+    width: 100%;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+    padding: 0;
+}
+.contact-list-item{
+    background:rgba(255, 255, 255, 0.9);
+    color:rgb(0, 0, 0);
+    width:95%;
+    height: 30px;
+    margin: 0px 0px 10px 0px;
+    border-radius: 10px;
+    border: 2px solid rgb(2, 119, 119, 0.8) ;
+}
+.contact-list-label{
+    color:rgb(19, 230, 230) ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0px;
+}
+#textarea{
+    height: 100px;
+    resize: none;
+}
+#Contact-Submit {
+    display: inline-block;
+    position: relative;
+    background: radial-gradient(circle, rgb(153, 229, 229), rgb(1, 73, 73)  50%);
+    color: rgb(7, 121, 121) ;
+    border-radius: 15px;
+    width: 97%;
+    height: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    border: 1px solid rgb(227, 214, 214);
+    box-shadow: 5px 2px 4px 1px rgba(51, 46, 46, 0.2);
+  }
+  
+  #Contact-Submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle, rgb(153, 229, 229), rgb(3, 95, 95)  70%);
+    color:rgb(249, 249, 250);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+
+  #Contact-Submit:hover::before {
+    opacity: 0.8;
+  }
+  
+ 
+
+.contact-list-item:focus{
+    outline: none;
+    caret-color: rgb(66, 66, 242);
+}
+
+/* Add your existing styles here */
+
+#Contact-Submit.loading {
+    position: relative;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(720deg);
+    }
+    75%{
+        transform: rotate(1080deg);
+    }
+    100% {
+        transform: rotate(1440deg);
+    }
+}
+
+
+#Contact-Submit.loading:after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 4px dotted #fff;
+    border-top: 4px dotted rgb(7, 121, 121);
+    border-left: none;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    
+}
+
+@media screen and (max-width:1270px) {
+    main{
+        width: 40vw;
+        height: 550px;
+    }
+    .contact-list-item{
+        margin-bottom: 20px;
+    }
+    #Contact-Submit{
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    main{
+        width: 45vw;
+        height: 580px;
+    }
+    .contact-list-item{
+        margin-bottom: 20px;
+    }
+    #Contact-Submit{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        background-size: cover;
+    }
+    main{
+        width: 50vw;
+        height: 580px;
+    }
+    .contact-list-item{
+        margin-bottom: 20px;
+    }
+    #Contact-Submit{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    body{
+        background-size: cover !important;
+    }
+    main{
+        width: 55vw;
+        height: 580px;
+        margin-top: 10px !important;
+    }
+    .contact-list-item{
+        margin-bottom: 20px;
+    }
+    #Contact-Submit{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    body{
+        background-size: contain !important;
+    }
+    main{
+        width: 62vw;
+        height: 580px;
+        margin-top: 50px !important;
+    }
+    .contact-list-item{
+        margin-bottom: 20px;
+    }
+    #Contact-Submit{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    body{
+        background-size: contain !important;
+    }
+    main{
+        width: 68vw;
+        height: 580px;
+        margin-top: 20px !important;
+    }
+    .contact-list-item{
+        margin-bottom: 20px;
+    }
+    #Contact-Submit{
+        margin-top: 20px;
+    }
+}
+
+
